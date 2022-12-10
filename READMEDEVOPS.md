@@ -30,6 +30,11 @@ go to github - project - settings - secrets
 Create "AZURE_CREDENTIALS"
 Post value from output from az 
 
+provider "azurerm" {
+skip_provider_registration = "true"
+features {}
+}
+
 git commit & push to trigger github action (only in branch starting with env-***).
 
 
