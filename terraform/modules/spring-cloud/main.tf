@@ -9,7 +9,7 @@ resource "azurerm_spring_cloud_service" "application" {
   name                = local.spring_cloud_service_name
   resource_group_name = var.resource_group
   location            = var.location
-  sku_name            = "B0"
+  sku_name            = "S0"
 
   tags = {
     "environment"      = var.environment
