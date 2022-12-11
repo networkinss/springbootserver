@@ -38,6 +38,7 @@ runs:
         action: deploy
         azure-subscription: ${{ env.SUBSCRIPTION_ID }}
         service-name: ${{ inputs.spring_cloud_service_name }}
-        app-name: ${{ inputs.application_name }}
+        app-name: springbootserver
+#        app-name: ${{ inputs.application_name }}
         use-staging-deployment: ${{ inputs.use_staging_deployment }}
         package: "*.[j,w]ar"

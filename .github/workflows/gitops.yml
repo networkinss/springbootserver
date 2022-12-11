@@ -41,11 +41,11 @@ jobs:
       - name: Output
         run: echo "DEBUG02 - ${{ needs.manage-infrastructure.outputs.application_caf_name }}"
       - name: Deploy a Java application to Azure Spring Apps
-        uses: networkinss/springbootserver/actions@v0.2.5
+        uses: networkinss/springbootserver/actions@v0.2.6
 #        uses: microsoft/nubesgen-actions/gitops-deploy-to-spring-cloud-java@v0.9.0
         with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
-          application_name: app-springbootserver
+          application_name: springbootserver
 #          application_name: ${{ needs.manage-infrastructure.outputs.application_name }}
           spring_cloud_service_name: ${{ needs.manage-infrastructure.outputs.spring_cloud_service_name }}
   display-information:
