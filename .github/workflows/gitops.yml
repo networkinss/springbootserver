@@ -43,7 +43,6 @@ jobs:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
           application_name: ${{ needs.manage-infrastructure.outputs.application_name }}
           spring_cloud_service_name: ${{ needs.manage-infrastructure.outputs.spring_cloud_service_name }}
-          azure-subscription: df235385-c7e7-42e2-85d6-3ec17addf4e1
   display-information:
     needs: [manage-infrastructure]
     runs-on: ubuntu-20.04

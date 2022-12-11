@@ -42,6 +42,7 @@ git config --global core.autocrlf false
 git commit & push to trigger github action (only in branch starting with env-***).
 Like:
 git commit -am "gitops" && git tag -a v0.2.5 -m "v0.2.5" && git push origin --tags && git push
+git commit -am "gitops" && git push
 
 
 
