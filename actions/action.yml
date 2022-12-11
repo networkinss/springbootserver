@@ -30,7 +30,7 @@ runs:
       with:
         creds: ${{ inputs.azure_credentials }}
     - name: Get Subscription ID
-      run: echo "SUBSCRIPTION_ID=AzSubscription" >> $GITHUB_ENV
+      run: echo "SUBSCRIPTION_ID=${{ inputs.azure_credentials.subscriptionId }}" >> $GITHUB_ENV
       shell: bash
     - name: Deploy to Azure Spring Cloud
       uses: azure/spring-cloud-deploy@v1
