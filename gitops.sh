@@ -7,7 +7,7 @@ RESOURCE_GROUP_NAME=rg-terraform-001
 # The location of the resource group. For example `eastus`.
 LOCATION=northeurope
 # The storage account (inside the resource group) used by Terraform to store its remote state.
-TF_STORAGE_ACCOUNT=st-terraform-001
+TF_STORAGE_ACCOUNT=stterraform$RANDOM
 # The container name (inside the storage account) used by Terraform to store its remote state.
 CONTAINER_NAME=tfstate
 # to avoid path problem with subscription
