@@ -36,9 +36,12 @@ jobs:
     needs: [manage-infrastructure, build]
     runs-on: ubuntu-20.04
     steps:
+      - name: Output
+        run: echo "TEST - ${{ needs.manage-infrastructure.outputs.application_name }}"
+      - name: Output
+        run: echo "TEST - ${{ needs.manage-infrastructure.outputs.application_caf_name }}"
       - name: Deploy a Java application to Azure Spring Apps
         uses: networkinss/springbootserver/actions@v0.2.5
-        run: echo "TEST - ${{ needs.manage-infrastructure.outputs.spring_cloud_service_name }}"
 #        uses: microsoft/nubesgen-actions/gitops-deploy-to-spring-cloud-java@v0.9.0
         with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
