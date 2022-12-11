@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Deploy a Java application to Azure Spring Apps
-        uses: action.yml
+        uses: ./action.yml
 #        uses: microsoft/nubesgen-actions/gitops-deploy-to-spring-cloud-java@v0.9.0
         with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
